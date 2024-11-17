@@ -14,14 +14,8 @@ namespace NoShadowsPatch
         {
             return await SynthesisPipeline.Instance
                 .AddPatch<ISkyrimMod, ISkyrimModGetter>(RunPatch)
-                .Run(args, new RunPreferences()
-                {
-                    ActionsForEmptyArgs = new RunDefaultPatcher()
-                    {
-                        IdentifyingModKey = "YourPatcher.esp",
-                        TargetRelease = GameRelease.SkyrimSE,
-                    }
-                });
+                .SetTypicalOpen(GameRelease.SkyrimSE, "YourPatcher.esp")
+                .Run(args);
         }
 
         public static void RunPatch(IPatcherState<ISkyrimMod, ISkyrimModGetter> state)
@@ -42,6 +36,8 @@ namespace NoShadowsPatch
                     if (lightGetter.Flags.HasFlag(Light.Flag.ShadowSpotlight)) {
                         light.Flags -= Light.Flag.ShadowSpotlight;
                     }
+
+                    Console.WriteLine(light.EditorID);
                 }
             }        
         }

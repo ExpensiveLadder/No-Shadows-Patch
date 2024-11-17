@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NoShadowsPatch")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b885e1a4ce3fc79339077bdf564731331949e1b9")]
 [assembly: System.Reflection.AssemblyProductAttribute("NoShadowsPatch")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NoShadowsPatch")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
